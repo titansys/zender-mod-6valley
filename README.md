@@ -4,7 +4,7 @@
 
 🛠 Free modification for 6valley to allow using Zender's SMS or WhatsApp features for sending OTP
 
-## What is StackFood?
+## What is 6valley?
 
 6valley is a multi-vendor e-commerce system where you can organize multiple shops and stores such as digital store, fashion store, sports store, home & living store, health & beauty store, and many others in one platform. 6valley is available in both mobile app and web app. Backend, Web frontend, and admin panel developed by PHP laravel. Mobile app is developed by flutter for support both iOS and Android.
 
