@@ -80,8 +80,8 @@ class SMSModuleController extends Controller
                 'updated_at' => now(),
             ]);
         } elseif ($module == 'zender_gateway') {
-            DB::table('business_settings')->updateOrInsert(['key' => 'zender_gateway'], [
-                'key' => 'zender_gateway',
+            DB::table('business_settings')->updateOrInsert(['type' => 'zender_gateway'], [
+                'type' => 'zender_gateway',
                 'value' => json_encode([
                     'status' => $request['status'],
                     'site_url' => $request['site_url'],
@@ -167,9 +167,9 @@ class SMSModuleController extends Controller
                     'type' => 'releans_sms',
                     'value' => json_encode([
                         'status' => 0,
-                        'api_key' => $request['api_key'],
-                        'from' => $request['from'],
-                        'otp_template' => $request['otp_template']
+                        'api_key' => $config['api_key'],
+                        'from' => $config['from'],
+                        'otp_template' => $config['otp_template']
                     ]),
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -177,9 +177,9 @@ class SMSModuleController extends Controller
             }
 
             $config = Helpers::get_business_settings('zender_gateway');
-            if ($module != 'zender_gateway') {
-                DB::table('business_settings')->updateOrInsert(['key' => 'zender_gateway'], [
-                    'key' => 'zender_gateway',
+            if (isset($config) && $module != 'zender_gateway') {
+                DB::table('business_settings')->updateOrInsert(['type' => 'zender_gateway'], [
+                    'type' => 'zender_gateway',
                     'value' => json_encode([
                         'status' => 0,
                         'site_url' => $config['site_url'],
