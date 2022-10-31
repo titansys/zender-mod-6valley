@@ -26,6 +26,16 @@ This modification is very easy to install. It is basically modified controller f
 
 5. All done!
 
+## Updating
+
+This modification is very easy to update.
+
+1. Download the latest release.zip file from [here](https://github.com/titansys/zender-mod-6valley/releases).
+
+2. Upload the contents of **install** folder to the root of your 6valley.
+
+3. All done!
+
 ## Disclaimer
 
 Titan Systems is in no way affiliated with the author of 6valley script, please use this modification in your own discretion.
